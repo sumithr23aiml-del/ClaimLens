@@ -1,0 +1,42 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: claimlens-postgres
+    environment:
+      POSTGRES_DB: claimlens
+      POSTGRES_USER: claimlens
+      POSTGRES_PASSWORD: claimlens
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    container_name: claimlens-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio
+    container_name: claimlens-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: claimlens
+      MINIO_ROOT_PASSWORD: claimlens123
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:

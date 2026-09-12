@@ -1,0 +1,15 @@
+operation,labor_rate_per_hour
+bumper_repair,750
+bumper_replace,900
+door_repair,700
+door_replace,850
+hood_repair,700
+hood_replace,850
+trunk_repair,700
+trunk_replace,850
+fender_repair,650
+fender_replace,800
+headlight_replace,600
+windshield_replace,700
+mirror_replace,500
+wheel_replace,450
