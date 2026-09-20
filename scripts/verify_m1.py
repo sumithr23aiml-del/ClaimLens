@@ -12,7 +12,7 @@ import psycopg
 DSN = (
     f"host={os.getenv('DB_HOST', 'localhost')} port={os.getenv('DB_PORT', '5432')} "
     f"dbname={os.getenv('DB_NAME', 'claimlens')} user={os.getenv('DB_USER', 'claimlens')} "
-    f"password={os.getenv('DB_PASS', 'claimlens_dev_2026')}"
+    f"password={os.getenv('DB_PASS', 'claimlens')}"
 )
 TIKA = os.getenv('TIKA_URL', 'http://localhost:9998')
 

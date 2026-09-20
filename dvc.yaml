@@ -1,0 +1,7 @@
+stages:
+  document_etl:
+    cmd: python -m services.document_etl.pipeline
+    deps:
+      - services/document_etl
+    outs:
+      - data/processed/document_etl
