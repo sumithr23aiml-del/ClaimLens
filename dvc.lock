@@ -1,0 +1,16 @@
+schema: '2.0'
+stages:
+  document_etl:
+    cmd: python -m services.document_etl.pipeline
+    deps:
+    - path: services/document_etl
+      hash: md5
+      md5: 264e90aa8824ddb3371bfeaa380190de.dir
+      size: 8127
+      nfiles: 15
+    outs:
+    - path: data/processed/document_etl
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0

@@ -1,0 +1,39 @@
+fnol_form:
+  required:
+    - loss_date
+    - loss_time
+    - loss_location
+    - description
+    - claimant_name
+
+policy_schedule:
+  required:
+    - policy_number
+    - sum_insured
+    - deductible
+    - period_from
+    - period_to
+
+repair_invoice:
+  required: false
+  fields:
+    - invoice_number
+    - invoice_date
+    - vendor_name
+    - line_items
+    - total_amount
+
+medical_bill:
+  required: false
+
+photograph:
+  required: false
+
+police_report:
+  required: false
+
+bank_details:
+  required:
+    - account_number
+    - bank_name
+    - ifsc
